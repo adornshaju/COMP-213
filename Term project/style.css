@@ -1,0 +1,145 @@
+head,header,nav, main, aside, footer {
+    border: 0px solid rgb(0, 0, 0);
+    } 
+*{
+    box-sizing: border-box;
+}    
+
+h1{
+    color: #ffffff;
+    padding-left: 1cm;
+}
+
+h2{
+    color: red;
+}
+body{
+    margin: 0px;
+    background-color: rgb(255, 255, 255);
+    min-width: 500px;
+}
+header, nav, main, aside, footer {
+    background-color:#ffffff;
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: rgb(219, 42, 22);
+}
+.form{
+    display: block;
+}
+
+.block{
+    display: block;
+}
+.pic{
+    display: block;
+    margin-left: auto;
+}
+.bord{
+  padding: 0.5cm;
+}
+.hi{
+    display: flex;
+}
+nav ol {
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    background-color: rgb(140, 136, 136) ;
+    text-align: center;
+}
+
+tr:nth-child(even) 
+{background-color: #f2f2f2;}
+nav li {
+    padding: 15px; 
+    border-bottom: 1px solid #cccccc; 
+}
+
+main h2,main p{
+    margin: 0px;
+}
+main {
+    padding:5%;
+ }
+.space{
+    line-height: 0.8cm;
+}
+ nav{
+    background-color: rgb(163, 158, 158) ;
+ }
+ aside{
+    text-align: center;
+    background-color:  rgb(163, 158, 158) ;
+ }
+ aside img{
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    margin: 10px;
+ }
+
+ footer {
+    border-top: 1px; 
+    padding: 10px 0;
+    text-align: center; 
+    background-color: red
+    
+}
+
+@media (min-width: 680px) {
+    body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+    }
+  
+    header { grid-area: header; }
+    nav { grid-area: nav; }
+    main { grid-area: main; }
+    aside { grid-area: aside; }
+    footer { grid-area: footer; }
+  
+    nav ol {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    nav ol li {
+      border: none;
+    }
+  
+    aside img {
+      width: 200px;
+      height: auto;
+      margin: 25px;
+    }
+  
+    aside {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (min-width:1024px){
+    body{
+      display: grid;
+      grid-template-areas:
+      "header header header"
+      "nav main aside"
+      "footer footer footer";
+      grid-template-columns:150px 2fr 1fr;
+      width: 80%;
+      margin: auto;
+    }
+    nav ol{
+      display: block;
+    }
+  }
+  
